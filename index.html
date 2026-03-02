@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 6 Brain Rules That Separate Millionaires from Everyone Else</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1208;
+      --warm-mid: #5c4a2a;
+      --accent: #c8622a;
+      --accent-light: #f0e0d0;
+      --paper: #faf7f2;
+      --rule: #e0d8cc;
+      --serif: 'Playfair Display', Georgia, serif;
+      --body: 'Source Serif 4', Georgia, serif;
+      --mono: 'DM Mono', monospace;
+    }
+
+    html { background: var(--paper); }
+
+    body {
+      font-family: var(--body);
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.8;
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    /* ── Top Bar ── */
+    .topbar {
+      border-bottom: 1px solid var(--rule);
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      background: var(--paper);
+      z-index: 100;
+    }
+    .topbar-pub {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--warm-mid);
+    }
+    .topbar-dot { color: var(--rule); }
+    .topbar-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .08em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+    .topbar-read {
+      margin-left: auto;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--warm-mid);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 760px;
+      margin: 72px auto 0;
+      padding: 0 32px;
+    }
+
+    .tag-pill {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 2px;
+      padding: 3px 10px;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      line-height: 1.18;
+      font-weight: 700;
+      letter-spacing: -.01em;
+      margin-bottom: 24px;
+    }
+
+    .subtitle {
+      font-size: 1.18rem;
+      color: var(--warm-mid);
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      border-left: 3px solid var(--accent);
+      padding-left: 20px;
+    }
+
+    .byline {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 56px;
+    }
+    .byline-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent) 0%, #8b3a1a 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-family: var(--mono); font-size: 14px; font-weight: 500;
+      flex-shrink: 0;
+    }
+    .byline-text { font-size: 14px; color: var(--warm-mid); line-height: 1.5; }
+    .byline-name { font-weight: 400; color: var(--ink); }
+
+    /* ── Body ── */
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 32px 120px;
+    }
+
+    p { margin-bottom: 1.6em; }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin: 3.2em 0 .8em;
+      line-height: 1.25;
+    }
+
+    .principle-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin: 3.6em 0 1em;
+    }
+    .principle-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      background: var(--accent-light);
+      border: 1px solid #e0b89a;
+      padding: 4px 10px;
+      border-radius: 2px;
+      white-space: nowrap;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+    .principle-header h2 {
+      margin: 0;
+      font-size: 1.55rem;
+    }
+
+    /* Pull Quote */
+    .pull-quote {
+      margin: 2.8em 0;
+      padding: 28px 36px;
+      border-left: 4px solid var(--accent);
+      background: var(--accent-light);
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      line-height: 1.55;
+      color: var(--warm-mid);
+    }
+    .pull-quote cite {
+      display: block;
+      margin-top: 12px;
+      font-size: .85rem;
+      font-style: normal;
+      font-family: var(--mono);
+      letter-spacing: .06em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    /* Call-out box */
+    .callout {
+      background: var(--ink);
+      color: var(--accent-light);
+      padding: 28px 36px;
+      margin: 2.4em 0;
+      border-radius: 2px;
+    }
+    .callout-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .callout p {
+      font-size: .96rem;
+      line-height: 1.7;
+      margin-bottom: 0;
+      color: #f0e0d0;
+    }
+
+    /* ── Article Images ── */
+    .article-img {
+      width: 100%;
+      display: block;
+      border-radius: 2px;
+      margin: 0 0 2em;
+    }
+    .hero-img-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 32px 48px;
+    }
+    .hero-img-wrap img {
+      width: 100%;
+      display: block;
+      border-radius: 2px;
+    }
+    .principle-img {
+      margin-bottom: 0;
+    }
+
+    /* Section rule */
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 4em 0;
+    }
+
+    /* Summary table */
+    .summary {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      padding: 36px 40px;
+      margin: 3.2em 0;
+    }
+    .summary h3 {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+    .summary-item {
+      display: flex;
+      gap: 20px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: flex-start;
+    }
+    .summary-item:last-child { border-bottom: none; }
+    .summary-n {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .summary-text { font-size: .95rem; line-height: 1.6; color: var(--ink); }
+    .summary-text strong { font-weight: 400; font-family: var(--serif); font-style: italic; font-size: 1.05em; }
+
+    /* ── CTA Newsletter ── */
+    .cta-wrapper {
+      background: var(--ink);
+      padding: 72px 32px;
+      margin-top: 0;
+    }
+    .cta-inner {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .cta-eyebrow {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .cta-eyebrow span {
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .cta-heading {
+      font-family: var(--serif);
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      font-weight: 700;
+      color: #faf7f2;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      letter-spacing: -.01em;
+    }
+    .cta-heading em {
+      color: var(--accent);
+      font-style: italic;
+    }
+    .cta-body {
+      font-family: var(--body);
+      font-size: .98rem;
+      font-weight: 300;
+      color: #b8a898;
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+    .cta-bullets {
+      list-style: none;
+      margin-bottom: 36px;
+    }
+    .cta-bullets li {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      letter-spacing: .05em;
+      color: #d0c4b4;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .cta-bullets li::before {
+      content: '→';
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .cta-form {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .cta-input {
+      flex: 1;
+      min-width: 220px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 2px;
+      padding: 14px 18px;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: #faf7f2;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .cta-input::placeholder { color: #6b5a4a; }
+    .cta-input:focus { border-color: var(--accent); }
+    .cta-btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 2px;
+      padding: 14px 28px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .2s, transform .1s;
+    }
+    .cta-btn:hover { background: #a84e20; }
+    .cta-btn:active { transform: scale(.98); }
+    .cta-disclaimer {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: .06em;
+      color: #6b5a4a;
+      line-height: 1.6;
+    }
+    .cta-disclaimer strong {
+      color: #a0907e;
+      font-weight: 500;
+    }
+    .cta-author-line {
+      margin-top: 40px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,.07);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .cta-avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3a2a1a 0%, #1a1208 100%);
+      border: 1px solid var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 12px; color: var(--accent);
+      flex-shrink: 0;
+    }
+    .cta-author-text {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .08em;
+      color: #6b5a4a;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
+    .cta-author-text strong { color: #a0907e; display: block; margin-bottom: 2px; }
+
+    /* ── Kit Form Overrides ── */
+    .cta-wrapper .seva-form.formkit-form {
+      background: transparent !important;
+      border: none !important;
+      max-width: 100% !important;
+      overflow: visible !important;
+    }
+    .cta-wrapper .formkit-background { display: none !important; }
+    .cta-wrapper [data-style="minimal"] { padding: 0 !important; }
+    .cta-wrapper .formkit-header,
+    .cta-wrapper .formkit-subheader,
+    .cta-wrapper .formkit-guarantee,
+    .cta-wrapper .formkit-powered-by-convertkit-container { display: none !important; }
+    .cta-wrapper .seva-fields.formkit-fields {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      gap: 12px !important;
+      margin: 0 !important;
+      width: 100% !important;
+    }
+    .cta-wrapper .formkit-field {
+      flex: 1 1 auto !important;
+      margin: 0 !important;
+    }
+    .cta-wrapper .formkit-input {
+      width: 100% !important;
+      background: rgba(255,255,255,.06) !important;
+      border: 1px solid rgba(255,255,255,.15) !important;
+      border-radius: 2px !important;
+      padding: 14px 18px !important;
+      font-family: var(--mono) !important;
+      font-size: 13px !important;
+      color: #faf7f2 !important;
+      outline: none !important;
+      margin: 0 !important;
+    }
+    .cta-wrapper .formkit-input::placeholder { color: #6b5a4a !important; opacity: 1 !important; }
+    .cta-wrapper .formkit-input:focus { border-color: var(--accent) !important; }
+    .cta-wrapper .formkit-submit {
+      flex: 0 0 auto !important;
+      background: var(--accent) !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: 2px !important;
+      font-family: var(--mono) !important;
+      font-size: 11px !important;
+      letter-spacing: .16em !important;
+      text-transform: uppercase !important;
+      cursor: pointer !important;
+      white-space: nowrap !important;
+      transition: background .2s !important;
+      margin: 0 0 0 0 !important;
+      padding: 0 !important;
+      height: auto !important;
+    }
+    .cta-wrapper .formkit-submit > span {
+      display: block !important;
+      padding: 14px 28px !important;
+    }
+    .cta-wrapper .formkit-submit:hover > span { background-color: rgba(0,0,0,.1) !important; }
+    .cta-wrapper .formkit-alert-error {
+      background: rgba(200,98,42,.15) !important;
+      border-color: var(--accent) !important;
+      color: #f0c0a0 !important;
+      margin: 0 0 12px !important;
+      border-radius: 2px !important;
+    }
+    /* ── Kit success state ── */
+    .cta-wrapper .formkit-alert-success {
+      display: block !important;
+      background: rgba(200,98,42,.15) !important;
+      border: 1px solid var(--accent) !important;
+      border-radius: 2px !important;
+      padding: 16px 20px !important;
+      font-family: var(--mono) !important;
+      font-size: 12px !important;
+      letter-spacing: .08em !important;
+      color: #f0e0d0 !important;
+      text-align: center !important;
+      margin: 0 !important;
+      list-style: none !important;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--rule);
+      text-align: center;
+      padding: 48px 32px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .1em;
+      color: var(--warm-mid);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 600px) {
+      .hero, .content { padding: 0 20px; }
+      h1 { font-size: 2rem; }
+      .pull-quote { padding: 20px 24px; }
+      .callout { padding: 20px 24px; }
+      .summary { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <span class="topbar-pub">Mind & Money</span>
+    <span class="topbar-dot">·</span>
+    <span class="topbar-tag">Self-Development</span>
+    <span class="topbar-read">9 min read</span>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="tag-pill">Millionaire Mindset</div>
+    <h1>The 6 Brain Rules That Separate Millionaires from Everyone Else</h1>
+    <p class="subtitle">
+      Your success is not determined by how hard you work — it's determined by how you use your mind. Business powerhouse Natalie Dawson discovered this, and it changed everything.
+    </p>
+
+  </header>
+
+  <!-- Hero Image -->
+  <div class="hero-img-wrap">
+    <img src="img-1.png" alt="A figure standing at the edge of a vast hexagonal landscape" />
+  </div>
+
+  <!-- Article body -->
+  <main class="content">
+
+    <p>
+      Most people believe wealth is the result of relentless hustle — longer hours, more sacrifice, more grinding. But Natalie Dawson, one of America's most influential business figures, built a nine-figure enterprise by doing something different: she changed <em>how she thinks</em>.
+    </p>
+    <p>
+      Dawson went from zero capital to the top 1% of earners in the United States within a few years. The gap between her and everyone else wasn't talent, privilege, or luck. It was six specific shifts in how she used her brain.
+    </p>
+    <p>
+      Here they are — in full, without padding.
+    </p>
+
+    <hr class="section-rule" />
+
+    <!-- Principle 1 -->
+    <img src="img-2.png" alt="An hourglass in a vast landscape" class="article-img principle-img" />
+    <div class="principle-header">
+      <span class="principle-num">No. 01</span>
+      <h2>Only Think About What Still Matters in 5 Years</h2>
+    </div>
+
+    <p>
+      When something goes wrong — a key team member quits, a client complains, a deal falls apart — your brain's first instinct is to panic. You catastrophize. You spiral. You spend enormous mental energy on a problem that, statistically, will be irrelevant within 12 months.
+    </p>
+
+    <div class="pull-quote">
+      "Ask yourself one question: Will this still matter in five years? If the answer is no, it doesn't deserve your emotional energy. If the answer is yes — it probably can't be fixed anyway, so worrying is still a waste of time."
+      <cite>— Natalie Dawson</cite>
+    </div>
+
+    <p>
+      This isn't about dismissing problems. It's about recognizing the difference between situations that deserve <em>action</em> and situations that only deserve <em>energy</em>. The mistake most people make is burning resources on the emotion rather than the solution.
+    </p>
+    <p>
+      Think back to a painful breakup or a humiliating failure at work. At the time, it felt irreversible. Six months later, life had moved on. The 5-year filter is a way of short-circuiting that wasted grief and redirecting yourself toward what actually matters: problem-solving.
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">The Shift</div>
+      <p>Stop asking "Why is this happening to me?" Start asking "What is the fastest path through this?" The former is emotional; the latter is strategic. Only one of them produces results.</p>
+    </div>
+
+    <!-- Principle 2 -->
+    <img src="img-3.png" alt="Bird's eye view of a person at a desk connected to a circuit-like network" class="article-img principle-img" />
+    <div class="principle-header">
+      <span class="principle-num">No. 02</span>
+      <h2>Train Your Zoom-Out Thinking — See the Pattern, Not Just the Problem</h2>
+    </div>
+
+    <p>
+      High achievers burn out for a specific reason: they become so absorbed in the immediate task that they lose sight of the system producing those tasks. When the same problem recurs two or three times, most people treat each occurrence as a separate fire to extinguish. Wealthy thinkers see something different — a pattern.
+    </p>
+    <p>
+      Dawson calls this <strong>Zoom-Out Thinking</strong>: deliberately pulling back from the trenches to view your business, career, or life from altitude. Imagine watching your operation from a satellite — cash flow, people, processes, decision loops. From up there, patterns that are invisible at ground level become obvious.
+    </p>
+
+    <div class="pull-quote">
+      "If the same failure is happening twice, three times, four times — you don't have a problem. You have a broken system."
+    </div>
+
+    <p>
+      The hardest workers are often the worst at this. Their diligence — the very quality that drives them — keeps them heads-down when they should be lifting their gaze. The result: they fix symptoms endlessly instead of curing the disease. They burn out not from overwork alone, but from the futility of fighting recurring battles they could have ended permanently.
+    </p>
+    <p>
+      Schedule regular time — weekly, if possible — to step away from execution and audit the patterns. What keeps going wrong? What always works? The answers will change how you operate at every level.
+    </p>
+
+    <!-- Principle 3 -->
+    <div class="principle-header">
+      <span class="principle-num">No. 03</span>
+      <h2>Think One Rank Above Your Current Position</h2>
+    </div>
+
+    <p>
+      Here's a simple exercise that radically improves your decision-making: before you respond to any significant situation, ask yourself — "What would my boss do here? What would the CEO do?"
+    </p>
+    <p>
+      When you're stuck in your own position, you're constrained by its limits: its anxieties, its blind spots, its narrow range of choices. The moment you imagine yourself one level up, your perspective expands. Complaints and grievances fall away. A broader palette of options appears.
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">A Practical Example</div>
+      <p>Your direct report is struggling with a project. Your instinct: help them. Now think like a CEO. If you rescue them, you're stunting their development <em>and</em> neglecting your own priorities. The higher perspective asks: is this my problem to solve — or theirs to grow through?</p>
+    </div>
+
+    <p>
+      Dawson found that the top 1% of earners she studied had been doing this from their earliest jobs — as regular employees, even as interns. They weren't waiting to be promoted before thinking at a higher level. They were practicing it continuously, and the promotion followed naturally as a consequence.
+    </p>
+    <p>
+      The title comes after the thinking. It almost never works the other way around.
+    </p>
+
+    <!-- Principle 4 -->
+    <img src="img-4.png" alt="A scale balancing emotion and data" class="article-img principle-img" />
+    <div class="principle-header">
+      <span class="principle-num">No. 04</span>
+      <h2>Make Decisions with Data, Not Emotion</h2>
+    </div>
+
+    <p>
+      This is the hardest principle — not because it's complicated, but because you are human. You have feelings about people. You have loyalty, history, affection, and gratitude. And all of that will cost you money if you let it drive business decisions.
+    </p>
+    <p>
+      Dawson's approach is direct: every role in her company has clear numerical targets. If those targets are not met, the person is replaced — regardless of personal relationship, shared history, or emotional bond. This sounds ruthless. But consider the alternative.
+    </p>
+
+    <div class="pull-quote">
+      "Allowing someone to stay in a role they're not suited for isn't kindness. It's a slow cruelty — to them, to the team, and to the company."
+    </div>
+
+    <p>
+      When you let emotion override data, you don't just fail to gain — you actively lose. The underperforming employee blocks the seat a high-performer could occupy. The product you're emotionally attached to drains resources that could go somewhere profitable. Sentiment has its place. Business decisions aren't that place.
+    </p>
+    <p>
+      The discipline here isn't about being cold. It's about separating two kinds of love: the kind that feels good in the moment, and the kind that actually helps someone grow.
+    </p>
+
+    <!-- Principle 5 -->
+    <img src="img-5.png" alt="A figure pouring from a cracked vessel, resources draining away" class="article-img principle-img" />
+    <div class="principle-header">
+      <span class="principle-num">No. 05</span>
+      <h2>Treat Time as Your Most Irreplaceable Asset</h2>
+    </div>
+
+    <p>
+      Business textbooks talk about three kinds of capital: people, assets, and money. Lose any of them and you can recover. A great employee can be replaced. Equipment can be repurchased. Revenue lost this quarter can be earned next quarter.
+    </p>
+    <p>
+      But time moves in one direction.
+    </p>
+    <p>
+      Top earners treat their calendar like a profit-and-loss statement. Every hour is an allocation decision. When someone asks for a "quick five-minute chat" — the true cost isn't five minutes. It's the context-switch, the follow-up, the momentum lost. The question Dawson trains herself to ask is: <em>What is the return on this time investment?</em>
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">The People-Pleasing Trap</div>
+      <p>The kindest, most obliging people are most vulnerable here. Saying yes to everything feels virtuous — but every "yes" to something small is a "no" to something that actually matters. Dawson's principle isn't to become callous. It's to become intentional.</p>
+    </div>
+
+    <p>
+      Review your last week. How many hours went to things that moved you meaningfully toward your goals? If that number is uncomfortable, it should be. The solution isn't working harder — it's ruthlessly protecting the time that would have been wasted.
+    </p>
+
+    <!-- Principle 6 -->
+    <div class="principle-header">
+      <span class="principle-num">No. 06</span>
+      <h2>Place Yourself in the Best Possible Environment</h2>
+    </div>
+
+    <p>
+      You are, in many ways, an average of your environment. The people around you shape what feels normal, what feels ambitious, what feels achievable. If your environment quietly signals that comfort is fine and mediocrity is acceptable, that signal will seep into your thinking regardless of your conscious intentions.
+    </p>
+    <p>
+      Ultra-high earners are deliberate about this. They audit their environment constantly — not just where they work, but who they spend time with, what information sources they consume, what conversations they participate in. And of all environmental factors, Dawson considers <em>relationships</em> to be the most powerful.
+    </p>
+
+    <div class="pull-quote">
+      "If the people around you say 'don't work so hard' and 'good enough is fine' — it doesn't matter how ambitious you are. Their gravity will pull you down."
+    </div>
+
+    <p>
+      This isn't elitism. It's physics. A candle in a dark room changes everything. One person striving hard in a group that isn't can, paradoxically, create resentment rather than inspiration. Find the room where your ambition is the norm, not the exception.
+    </p>
+    <p>
+      Changing jobs is easier than ever. Communities of driven people exist everywhere — online and off. The old saying "stick it out for three years" is advice designed for a different era. There's no medal for enduring an environment that systematically limits you.
+    </p>
+
+    <hr class="section-rule" />
+
+    <!-- Summary -->
+    <img src="img-6.png" alt="A figure walking toward light, icons of the 6 principles floating above" class="article-img" />
+    <div class="summary">
+      <h3>The 6 Principles — At a Glance</h3>
+      <div class="summary-item">
+        <span class="summary-n">01</span>
+        <div class="summary-text"><strong>The 5-Year Filter</strong> — If it won't matter in five years, it doesn't deserve your emotional energy today.</div>
+      </div>
+      <div class="summary-item">
+        <span class="summary-n">02</span>
+        <div class="summary-text"><strong>Zoom-Out Thinking</strong> — Step back regularly to see patterns, not just problems. Fix systems, not just symptoms.</div>
+      </div>
+      <div class="summary-item">
+        <span class="summary-n">03</span>
+        <div class="summary-text"><strong>One Rank Up</strong> — Before deciding, imagine you're already at the next level. What would that version of you choose?</div>
+      </div>
+      <div class="summary-item">
+        <span class="summary-n">04</span>
+        <div class="summary-text"><strong>Data Over Emotion</strong> — Set clear, measurable standards. Let the numbers guide the hard calls, not feelings.</div>
+      </div>
+      <div class="summary-item">
+        <span class="summary-n">05</span>
+        <div class="summary-text"><strong>Time is Irreplaceable</strong> — Treat your calendar like a P&L. Every hour is an investment. Demand a return.</div>
+      </div>
+      <div class="summary-item">
+        <span class="summary-n">06</span>
+        <div class="summary-text"><strong>Upgrade Your Environment</strong> — Surround yourself with people who raise your standards, not lower them.</div>
+      </div>
+    </div>
+
+    <h2>The Real Takeaway</h2>
+
+    <p>
+      None of these six principles require more capital. None require a prestigious degree or a lucky break. They require something harder and more available: a conscious choice to think differently, every single day.
+    </p>
+    <p>
+      The gap between average and wealthy isn't primarily about strategy or tactics. It's about the underlying mental habits that shape every small decision — the ones that compound quietly over years until the results become undeniable.
+    </p>
+    <p>
+      The principles Natalie Dawson identified aren't exotic. But most people read them, nod, and return to their default patterns by tomorrow morning. The ones who don't — who actually implement even two or three of these — find that things start changing in ways they didn't expect.
+    </p>
+    <p>
+      Start with one. Just one. And do it today.
+    </p>
+
+  </main>
+
+  <!-- Newsletter CTA -->
+  <section class="cta-wrapper">
+    <div class="cta-inner">
+      <div class="cta-eyebrow"><span></span>Julian Locke · Private Newsletter</div>
+      <h2 class="cta-heading">What Medium Won't<br><em>Let Me Publish.</em></h2>
+      <p class="cta-body">
+        The ideas in this article are just the surface. Every week, I send one email with the kind of thinking that gets flagged, throttled, or quietly buried on every major platform. No algorithm. No editor. No filter.
+      </p>
+      <ul class="cta-bullets">
+        <li>How the world actually works — the mechanics they don't teach in school</li>
+        <li>The real psychology of money, power, and leverage</li>
+        <li>How to use your subconscious mind the way high-performers actually do it</li>
+        <li>The conversations that happen behind closed doors — and what to do with them</li>
+        <li>Moves that look counterintuitive from the outside, but compound quietly</li>
+      </ul>
+      <div class="cta-form">
+        <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+        <form action="https://app.kit.com/forms/9140739/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9140739" data-uid="f5791ce259" data-format="inline" data-version="5" min-width="400 500 600 700 800">
+          <div data-style="minimal">
+            <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+            <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+              <div class="formkit-field">
+                <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="your@email.com" required="" type="email" />
+              </div>
+              <button data-element="submit" class="formkit-submit">
+                <div class="formkit-spinner"><div></div><div></div><div></div></div>
+                <span>Get Access</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <p class="cta-disclaimer">
+        <strong>Only register if you're serious about changing your life. Casual readers need not apply.</strong>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Adapted from the work of Natalie Dawson &nbsp;·&nbsp; Mind &amp; Money &nbsp;·&nbsp; 2026
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var checkInterval = setInterval(function() {
+        var forms = document.querySelectorAll('.seva-form[data-uid="f5791ce259"]');
+        forms.forEach(function(form) {
+          var observer = new MutationObserver(function() {
+            var successAlert = form.querySelector('.formkit-alert-success');
+            var ctaForm = form.closest('.cta-form');
+            if (successAlert && successAlert.children.length > 0) {
+              if (ctaForm && !ctaForm.querySelector('.kit-success-msg')) {
+                var msg = document.createElement('div');
+                msg.className = 'kit-success-msg';
+                msg.style.cssText = [
+                  'background: rgba(200,98,42,.15)',
+                  'border: 1px solid #c8622a',
+                  'border-radius: 2px',
+                  'padding: 16px 24px',
+                  'font-family: var(--mono, monospace)',
+                  'font-size: 12px',
+                  'letter-spacing: .1em',
+                  'color: #f0e0d0',
+                  'text-align: center',
+                  'text-transform: uppercase'
+                ].join(';');
+                msg.textContent = '✓  You\'re in. Check your inbox to confirm.';
+                ctaForm.innerHTML = '';
+                ctaForm.appendChild(msg);
+              }
+            }
+          });
+          observer.observe(form, { childList: true, subtree: true, attributes: true });
+        });
+        clearInterval(checkInterval);
+      }, 500);
+    });
+  </script>
+</body>
+</html>
